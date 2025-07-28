@@ -1,7 +1,7 @@
 /*Inspired by Translucence theme from CapnKitten*/
 /*Source: https://github.com/CapnKitten/Translucence */
 
-/* Version: 0.0.2 Beta */
+/* Version: 0.0.3 Beta */
 
 /*
 *
@@ -18,17 +18,17 @@
   --app-radius: 12px;
   --app-radius-big: 18px;
   --main-rgb: 0,0,0;
-  --main-content-opacity: 0.2;
+  --main-content-opacity: 0.1;
   --sidebar-opacity: 0.4;
   --main-content-color: rgba(var(--main-rgb), var(--main-content-opacity));
   --sidebar-color: rgba(var(--main-rgb), var(--sidebar-opacity));
   /* ACCENT HSL AND TEXT COLOR SETTINGS */
-  --accent-hue: 156;
-  --accent-saturation: 77.5%;
-  --accent-lightness: 47.1%;
+  --accent-hue: 27;
+  --accent-saturation: 7%;
+  --accent-lightness: 50%;
   --accent-hsl: var(--accent-hue),calc(var(--accent-saturation) * var(--saturation-factor)),var(--accent-lightness);
-  --accent-opacity: 1;
-  --accent-text-color: hsl(0,0%,0%);
+  --accent-opacity: 0.3;
+  --accent-text-color: hsl(0,0%,100%);
   --accent-secondary-color: hsl(from hsl(var(--accent-hsl)) h calc(s * 0.1) l / 0.35);
   --accent-secondary-text-color: hsl(0,0%,94%);
   /* ALERT HSL AND TEXT COLOR SETTINGS */
@@ -145,8 +145,6 @@
   --background-modifier-selected: hsl(0,0%,100%,0.125);
   --background-modifier-accent: hsl(0,0%,100%,0.175);
   --background-primary: transparent;
-  --text-brand: hsl(var(--accent-hsl));
-  --text-link: hsl(var(--accent-hsl));
 }
 
 /*
@@ -259,7 +257,7 @@ body {
 }
 
 .sidebar_c48ade {
-  background-color: var(--sidebar-color);
+  background-color: var(--main-content-color) !important;
 }
 .sidebar_c48ade .container__2637a {
   background-color: transparent;
@@ -336,7 +334,8 @@ nav.guilds_c48ade {
 
 /*panels area*/
 .panels_c48ade {
-  background-color: transparent;
+  background-color: rgba(var(--main-rgb), 0.3) !important;
+
 }
 
 .actionButtons_e131a9 .button__201d5 path[fill] {
@@ -802,10 +801,6 @@ nav.guilds_c48ade {
   background: transparent;
 }
 
-.mentionButton__841c8 {
-  --text-link: hsl(var(--accent-hsl));
-}
-
 .threadSuggestionBar__841c8 {
   background-color: transparent;
 }
@@ -815,7 +810,7 @@ nav.guilds_c48ade {
 }
 
 .fakeLink_ada32f {
-  color: hsl(var(--accent-hsl));
+  color: rgb(0, 255, 0);
 }
 
 .inlineCode_ada32f,
@@ -2786,6 +2781,12 @@ nav.guilds_c48ade {
 
 .spoilerMarkdownContent__54ab5 {
   background-color: var(--textarea-block-color);
+}
+
+.markup__75297 a span {
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(90deg,rgba(87, 199, 133, 1) 0%, rgba(237, 221, 83, 1) 100%); 
 }
 
 /*
@@ -5040,25 +5041,6 @@ nav.guilds_c48ade {
 
 /*
  *
- *  SERVER FOLDERS
- *
- */
-.folder__48112 {
-  background-color: transparent;
-}
-.folder__48112.hover__48112 {
-  background-color: var(--server-folder-color);
-}
-
-.unreadMentionsIndicatorTop_ef3116 + .itemsContainer_ef3116 .folder__48112 {
-  background-color: var(--server-folder-color);
-}
-[style*="background-color: rgba(88, 101, 242, 0.4)"].folderIconWrapper__48112 {
-  background-color: hsla(var(--accent-hsl), 0.4) !important;
-}
-
-/*
- *
  *  SERVERS LIST
  *
  */
@@ -5080,6 +5062,24 @@ nav.guilds_c48ade {
   filter: none;
 }
 
+.folder__48112 {
+  background-color: transparent;
+}
+.folder__48112.hover__48112 {
+  background-color: var(--server-folder-color);
+}
+
+.unreadMentionsIndicatorTop_ef3116 + .itemsContainer_ef3116 .folder__48112 {
+  background-color: var(--server-folder-color);
+}
+[style*="background-color: rgba(88, 101, 242, 0.4)"].folderIconWrapper__48112 {
+  background-color: hsla(var(--accent-hsl), 0.4) !important;
+}
+
+.folderGroupBackground__48112 {
+  border-radius: 50px;
+}
+
 .wrapper__6e9f8 {
   border-radius: 50%;
   overflow: hidden;
@@ -5091,6 +5091,9 @@ nav.guilds_c48ade {
   border-radius: 50px 8px 8px 8px;
 }
 
+.folderGroup__48112 {
+  background: 50px;
+}
 .folderPreviewGuildIcon__48112:nth-child(2) {
   border-radius: 8px 50px 8px 8px;
 }
@@ -6558,4 +6561,4 @@ nav.guilds_c48ade {
   border-radius: var(--space-16);
 }
 
-/*# sourceMappingURL=main.css.map */
+
