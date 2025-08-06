@@ -1,7 +1,7 @@
 /*Inspired by Translucence theme from CapnKitten*/
 /*Source: https://github.com/CapnKitten/Translucence */
 
-/* Version: 0.0.4 Beta */
+/* Version: 0.0.5 Beta */
 
 /*
 *
@@ -301,6 +301,15 @@ body {
   background-color: var(--card-color);
   border-radius: var(--card-radius);
   border: none;
+}
+
+.modeConnected__2ea32 .name__2ea32, 
+.modeConnected__2ea32:hover .name__2ea32, 
+.modeSelected__2ea32 .name__2ea32, 
+.modeSelected__2ea32:hover .name__2ea32 {
+  background: linear-gradient(90deg, #88e055 0%, #C75757 50%, #e2213b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /*voice channels activities */
@@ -696,7 +705,11 @@ nav.guilds_c48ade {
   fill: var(--accent-text-color);
 }
 .childContainer__91a9d {
-    border-radius: var(--app-radius-big);
+  border-radius: var(--app-radius-big);
+}
+
+span.clanTag__5d473 {
+  border-radius: var(--app-radius-big);
 }
 
 /* MEMBERS LIST -> ACTIVITIES */
@@ -3013,6 +3026,15 @@ nav.guilds_c48ade {
   background-color: hsl(var(--accent-hsl), 0.5);
   backdrop-filter: blur(10px);
 }
+
+.emoji.jumboable {
+  border-radius: var(--card-radius);
+}
+
+.clanTagChiplet_c19a55 {
+  border-radius: var(--app-radius-big);
+}
+
 /*
  *
  *  POLLS
