@@ -1,7 +1,7 @@
 /*Inspired by Translucence theme from CapnKitten*/
 /*Source: https://github.com/CapnKitten/Translucence */
 
-/* Version: 0.0.5 Beta */
+/* Version: 0.0.6 Beta */
 
 /*
 *
@@ -28,14 +28,14 @@
   --app-radius: 12px;
   --app-radius-big: 18px;
   --main-rgb: 0,0,0;
-  --main-content-opacity: 0.4;
+  --main-content-opacity: 0.2;
   --sidebar-opacity: 0.4;
   --main-content-color: rgba(var(--main-rgb), var(--main-content-opacity));
   --sidebar-color: rgba(var(--main-rgb), var(--sidebar-opacity));
   /* ACCENT HSL AND TEXT COLOR SETTINGS */
-  --accent-hue: 27;
-  --accent-saturation: 7%;
-  --accent-lightness: 50%;
+  --accent-hue: 80;
+  --accent-saturation: 0%;
+  --accent-lightness: 10%;
   --accent-hsl: var(--accent-hue),calc(var(--accent-saturation) * var(--saturation-factor)),var(--accent-lightness);
   --accent-opacity: 0.4;
   --accent-text-color: hsl(0,0%,100%);
@@ -308,8 +308,20 @@ body {
 .modeSelected__2ea32 .name__2ea32, 
 .modeSelected__2ea32:hover .name__2ea32 {
   background: linear-gradient(90deg, #88e055 0%, #C75757 50%, #e2213b 100%);
+  background-image: linear-gradient(to left,rgb(51, 255, 0), rgb(255, 230, 0), red, rgb(234, 0, 255), rgb(0, 140, 255), rgb(51, 255, 0));
+  animation: gradient-text 16s linear infinite;
+  background-size: 500% 100%;
+  color: transparent !important;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  z-index: 1;
+}
+@keyframes gradient-text {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 500% 0;
+  }
 }
 
 /*voice channels activities */
@@ -2808,12 +2820,7 @@ span.clanTag__5d473 {
   border: none;
 }
 .markup__75297 .wrapper_f61d60 {
-  background-color: hsla(var(--mention-hsl), 0.25);
-  color: hsl(var(--mention-hsl));
-}
-.markup__75297 .wrapper_f61d60:hover {
-  background-color: hsla(var(--mention-hsl), 0.475);
-  color: hsl(var(--mention-hsl));
+  border-radius: var(--message-radius);
 }
 
 .spoilerMarkdownContent__54ab5 {
@@ -2863,6 +2870,7 @@ span.clanTag__5d473 {
 .backgroundFlash__5126c:not([style$="0);"]) {
   background-color: hsla(var(--accent-hsl), 0.3) !important;
   transition: 200ms ease-out background-color;
+  border-radius: var(--message-radius);
 }
 [style="background-color: rgba(148, 156, 247, 0);"].backgroundFlash__5126c {
   background-color: hsla(var(--accent-hsl), 0) !important;
