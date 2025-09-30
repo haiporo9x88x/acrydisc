@@ -1,7 +1,7 @@
 /*Inspired by Translucence theme from CapnKitten*/
 /*Source: https://github.com/CapnKitten/Translucence */
 
-/* Version: 0.0.8 Beta */
+/* Version: 0.0.9 Beta */
 
 /*
 *
@@ -6405,10 +6405,6 @@ span.clanTag__5d473 {
 .visual-refresh .header_f37cb1 {
   border-bottom: none;
   box-shadow: var(--popout-header-shadow);
-}
-.visual-refresh .container__2637a,
-.visual-refresh .privateChannels__35e86 {
-  padding-bottom: calc(var(--custom-app-panels-height, 0) + 10px);
 }
 .visual-refresh .panels_c48ade {
   background-color: transparent;
