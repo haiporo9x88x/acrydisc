@@ -1,7 +1,7 @@
 /*Inspired by Translucence theme from CapnKitten*/
 /*Source: https://github.com/CapnKitten/Translucence */
 
-/* Version: 0.0.9 Beta */
+/* Version: 0.0.10 Beta */
 
 /*
 *
@@ -418,6 +418,7 @@ nav.guilds_c48ade {
 .content__37e49,
 .activityPanel_c48ade {
   background: transparent !important;
+  border-radius: var(--app-radius-big);
 }
 
 .container_e131a9 .disabledButtonWrapper__201d5 {
