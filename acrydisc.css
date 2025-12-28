@@ -1,7 +1,7 @@
 /*Inspired by Translucence theme from CapnKitten*/
 /*Source: https://github.com/CapnKitten/Translucence */
 
-/* Version: 2.0.0 Beta */
+/* Version: 2.0.1 Beta */
 
 /*
 *
@@ -181,8 +181,8 @@ body {
 }
 
 ::selection {
-  background: hsla(var(--accent-hsl), 0.65);
-  color: var(--accent-text-color);
+  background: #85144b;
+  color: #01ff70;
   text-shadow: none;
 }
 
@@ -392,10 +392,6 @@ nav._5e434347c823b592-guilds {
   stroke: currentColor !important;
 }
 
-[style*="box-shadow: 0 0 0 0px var(--status-speaking), inset 0 0 0 2px var(--status-speaking), inset 0 0 0 3px var(--background-base-lower)"]._55bab3f0b2555838-userAvatar {
-  box-shadow: inset 0 0 0 2px hsl(var(--accent-hsl)), inset 0 0 0 3px var(--background-base-lower) !important;
-}
-
 .container_bd9e38 {
   width: calc(100% - 16px);
   margin: 0 8px 8px;
@@ -471,6 +467,10 @@ nav._5e434347c823b592-guilds {
 /* Move the avatar back to the right a bit to look clean. */
 ._37e49614b9f110a9-avatarWrapper ._37e49614b9f110a9-avatar{
   margin-left: 5px;
+}
+/* ping */
+._06d6249a1f2584ac-ping._06d6249a1f2584ac-largePing {
+    border-radius: 50%;
 }
 
 /* PANELS -> QUEST */
